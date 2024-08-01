@@ -1,0 +1,149 @@
+Uber Service profile- Support team
+
+App- Only service app
+
+Objects-Account- R , COntac- R, E. Dwlivery agent- no permission, Uber order- Delete permission
+
+Tab-Account - off , COntact on, Delivery agent- On, Uber order off
+
+create
+
+ Uber marketing profile with app lvel security - only marketing app and service app.
+ Object level- Case - Edit permission, Account no permission, Food item- delete permission,
+ tab level permission- case off, account on, food item off
+
+
+
+
+in Uber VIP team profile- Disable access to marketing app, and provide only read access to Campaign object, remove access to Food items object and 
+turn off the food item tab.
+
+Create a permission set to VIP team lead, that will enable him to access marketing app  and provide  Read, edit, access to campaign object.
+ Read and create access to Food item object. Enable the tab for food item object in permission set
+
+--> Create a profile called as Uber reviewer and provide as Food item with Read, create and edit permission. Turn off the Food item tab in profile.
+--> Create a permission set that enables second user to have read, create , edit and delete permission on food item object.
+--> Disable the Profit field for Uber reviewer profile and enable read permission for the profit field  in Permission set.
+
+Record Level Secutiry:
+ 1 --> Organization wide defaults
+  2-->  Role Hierarchey.
+  --> Sharing Roles.
+
+
+2 --> Role Hierarche: sharing Settings
+ 
+Create a role called Sr HR and assign it as second user. Cerate a role as Jr HR and assign admin user to it
+Create an object called as salary and make it private in OWD settings
+records of JR.HR
+
+
+--> create a task in uber order for collecting customer review when uber order status is delivered
+
+
+
+Dear Contact.lastname, 
+
+Welcome onboard!
+
+Your contact details as per our records is as follows, you may change it from our portal as necessary.
+
+Mobile- 123
+
+Email-1@1.com
+
+Regards,
+Uber team
+--> Object Relationship(Later topic)
+
+Approval Process
+
+create an approval process for uber order if rating is below 3. level 1 manual, level 2 crm manager. only juinor executives need this approval process
+
+
+Object Relationships:
+
+    --> Determine parent and child objects.
+    --> Have to create relationship field in the child object.
+
+1- Mastere and Detail.
+2- Lookup Relationship.
+3- External Relationship.
+
+
+
+1- Master and Detail:(Parent n Child relationship)
+   Standard objects can never be  Detail  
+  if u delete the parent record automatically child record will be deleted.
+  the relationship field is mandatory.
+  Tightelt coupled
+   Junction objects.(child will be having two masters)
+--> if child object has records we will not ablet to create MnD rel for 
+   sol: 1 --> create lookup rel b/w master and related obj.
+        2 --> give the valu for lookup field in all  the related obj RECORDS. (Data import)
+        3 --> Convert lookup to master-Detial.
+
+Roleup 
+
+2- LookUp:
+   Standard obj can be Master or Detail.
+   if u delete the parent child record wont be deleted,
+   relationship field is not mandatory.
+   Master 
+   Loosely coupled.
+
+
+ 
+--> create formula field called as uber expected profit as a guidance to sales agents while inducting a restaurant/ food item into the chain. 
+
+juinor sales agent 8 % from restaurant price
+
+senior sales agent 15%
+in food item
+
+
+--> If case type equals mechanical,chnage priority to medium --type n priority.
+
+
+create a record type for uber order called as corporate order
+in uber order add two new fields called as Credit limit , balance due
+these two fields should be available only in Corporate order layout
+for normal orders these two fields should not be present
+--> Normal orders.
+
+
+--> Create a report with uber orders with reward points in Report type. Add columns like Total order value, Priority, Status, from Uber order.
+Add columns like total reward points, expire date from reward points
+user profile
+second user
+
+Create a report with uber orders 
+Add columns like total reward points, expire date from reward points
+In field level security remove access to expire date for second user profile
+Create dashboard using this report and make it available for second user
+
+
+--> Chatter --> Standalone application,
+Tabs in multiple applications
+Profile
+
+--> Group.
+ ha loged into salesforce chatter.
+licenese called as Salesforce external chatter.
+
+--> Queue is container in SF, where you can use it to store records from diff obj's. 
+THese queue can be created for diff teams and can help process team's work in streamlined fashion
+
+
+
+
+
+
+
+
+
+
+
+
+
+
